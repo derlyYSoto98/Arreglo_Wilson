@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #ffffff; 
+}
+.menu a{
+    text-decoration: none;
+    color: white; 
+    transition: all .3s; 
+}
+.menu li{
+    box-shadow: 3px 0 rgb(255,255,255, .2 ) inset;
+    padding-left: 1.5em;
+    margin-right: 10px;
+ }
+.menu li:hover{
+   box-shadow: 17em 0 rgb(255,255,255, .2 ) inset;
+}
+.menu li a span{
+    margin-left: 9px;
+}
+.menu a:hover{
+    margin-left: 1em;
+}
+ul{
+  list-style: none;
+  margin-top: 60px;
+}
+
+.fas, .fab{
+    color: rgb(238, 238, 238);
+    font-size: 1.7em;
+    margin-right: 0.4em;
+}
+nav{
+    border-right: 1px solid #eaeaea; 
+    background-color: rgb(0,0,0, .8);
+    position: absolute;
+    left:0;
+    height: 100%;
+    top: 0;
+    padding-right: 2em;
+    padding-top: 3em;
+    z-index: 5;
+    left: -270px;
+    transition: all .3s;
+}
+li{
+    padding: 1.5em 1.2em;
+}
+.fa-bars{
+    position: absolute;
+    cursor: pointer;
+    left: 2em;
+    top: 2em;
+    z-index: 10;
+}
+
+.mostrar-nav{
+    left: 0;
+}
+h1{
+    text-align: right;
+    font-family: 'Rock Salt', cursive;
+    color: rgb(252, 0, 0);
+    margin-right: 3%;
+}
+.articles{
+    margin: 80px auto;
+     width: 50%;
+     display: grid;
+     justify-content: center;
+     grid-template-columns: repeat(3, 400px);
+     gap: 60px;
+     grid-template: 
+                    "article1   article2  article3"  auto
+                    /* "article4   article5  article6"  auto
+                    "article7   article8  empty"     auto */
+                    "footer     footer    footer"    100px /
+                     400px       400px    400px;
+  }
+  .elementStyleCSS {
+     /*  border-radius: 10px; */
+       display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2em;
+     font-weight:bold;
+     color: white;
+  }
+  .nav{
+     background: rgb(206, 20, 20);
+     grid-area: nav;
+ }
+ 
+ .header{
+     background: rgb(221, 12, 12);
+     grid-area: header;
+ }
+ 
+ .section{
+     background-image: url(../img/CY.jpg);
+     background-size: cover;
+     background-position: center center;
+     height: 500px;
+     grid-area: section;
+     width: 100%;
+ }
+ 
+ .article1{
+     grid-area: article1;
+ }
+ .article2{
+     grid-area: article2;
+ }
+ .article3{
+     grid-area: article3;
+ }
+ .footer{
+     background: rgb(121, 107, 114);
+     grid-area: footer;
+     font-size: 1em;
+ }
+ .news{
+ width: 400px;
+ }
+ p{
+     padding-top: 10px;
+ } 
+ .borde-inferior{
+     border-bottom: 1px rgb(19, 18, 18) solid;
+     width: 300px;
+     padding-top: 20px;
+ }
+.fas{
+margin-top: -20px;
+}

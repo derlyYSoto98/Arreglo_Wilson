@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../img/fondo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+input, button{
+    border: none;
+    padding-left: 5px;
+    font-size: 1em;
+    outline: none;
+    padding: 15px;
+    background: none;
+    color: rgb(255, 255, 255);
+}
+.td-sub{
+    border: none;
+    padding-left: 5px;
+    font-size: 1em;
+    outline: none;
+    padding: 15px;
+    background: none;
+    color: rgb(235, 224, 224);
+}
+form{
+    margin: 0 auto;
+    margin-left: 8%;
+    margin-top: 1%;
+    height: 250px;
+    width: 350px;
+  }
+.table1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+     width: 350px; 
+    height: 490px;
+    background-color: rgba(141, 116, 116, 0.5); 
+    border-radius: 30px; 
+}
+i{
+    color: white;
+    font-size: 20px;
+}
+.tds{
+    border-bottom: 1px solid rgb(253, 245, 245);
+}
+fieldset{
+    border: 1px 30px red;
+    border-radius: 40px;
+   /*  background-color: rgb(226, 9, 9, 0.1) ;  */
+}
+.titulo{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+::placeholder{
+    color: white;
+}
+h2{
+    color: rgb(252, 0, 0);
+    margin-left: 5%;
+    font-size: 2em;
+    margin-top: 20px;
+    font-family: 'Rock Salt', cursive;
+ }
+ .boton{
+    margin-left: 30%;
+     background-color: red;
+     border-radius: 50px;
+     cursor: pointer;
+ }
+ .btn{
+     padding-top: 10px;
+     padding-left: 50px;
+ }
+ .boton:hover{
+     background: rgb(221, 182, 6);
+ }
+th{
+     padding: 20px;
+     color: rgb(14, 13, 13);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     background: rgb(126, 123, 123,.4);
+     border-radius: 20px;
+ } 
+ .tab2{
+     margin: 0 auto;
+     margin-top: 250px;
+ }
+ .buton{
+    padding-top: 10px;
+}
+/* th{
+    border-bottom: 1px solid gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+.td2{
+    color: rgb(20, 20, 20);
+    padding: 10px;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+}

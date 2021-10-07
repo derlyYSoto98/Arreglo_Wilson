@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="icons/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+<nav>
+   <ul>
+        <li> <a href="#" class="a">Registrar Producto</a></li>
+        <li> <a href="#" class="a">Registrar Proveedor</a></li>
+        <li> <a href="index.html" class="a">Inicio</a></li>
+  </ul>
+    </nav>
+    <h2>Tu cuerpo, Tu prioridad!</h2>
+    <form action="" method="POST" name="form2">
+        <fieldset>
+            <table class="table1">
+             <tr>
+                 <td colespan="2" class="titulo">Registro de Usuarios</td>
+             </tr>
+             <tr>
+                 <td class="tds"><i class="far fa-address-card"></i><input type="number" id="txtiden" placeholder="Numero de identificacion" require></td>
+             </tr>
+             <tr>
+                 <td class="tds"><i class="far fa-user"></i><input type="text" id="txtno" placeholder="Nombres y apellidos" require></td>
+             </tr>
+             <tr>
+                 <td class="tds"><i class="fas fa-mobile-alt"></i><input type="text" id="txttel" placeholder="Numero de celular" require></td>
+             </tr>
+             <tr>
+                 <td class="tds" ><i class="fas fa-users"></i>
+                     <select id="txtusu" class="td-sub" require >
+                         <option>Tipo de usuario...</option>
+                         <option value="Administrador">Administrador</option>
+                         <option value="Cliente">Cliente</option>
+                     </select>
+                 </td>
+             </tr>
+             <tr>
+                 <td class="tds"><i class="fas fa-location-arrow"></i><input type="text" id="txtdire" placeholder="Direccion" require></td>
+             </tr>
+             <tr>
+                 <td class="tds"> <i class="far fa-envelope"></i><input type="text" id="txtemai" placeholder="Correo electronico" require ></td>
+             </tr>
+             <tr>
+                 <td class="tds"><i class="fas fa-lock"></i><input type="text" id="txtcon" placeholder="Crear contraseña" require></td>
+             </tr>
+             <tr>
+                <!--  <td class="btn"><input type="button" value="Registrar.." id="btnrec" class="boton" onclick="registra_usuario();"></td> -->
+                 <td class="buton"><button type="button" id="btnrec" class="boton" onclick="registrar_usuario();">Registrar</button></td> 
+             </tr>
+            </table>
+        </fieldset>    
+    </form>
+   <table class="tab2">
+       <th>ID</th>
+       <th>Numero_Documento</th>
+       <th>Nombre y apellido</th>
+       <th>Numero de Telefono</th>
+       <th>Tipo de usuario</th>
+       <th>Direccion</th>
+       <th>Correo Electronico</th>
+       <th>Contraseña</th>
+       <tbody id="tabla">    
+       </tbody>
+   </table>
+</body>
+</html>
+<script>
+    var usuario=[];
+    function registrar_usuario(){
+        var ident = document.getElementById('txtiden').value;
+        var nomb = document.getElementById('txtno').value;
+        var tele = document.getElementById('txttel').value;
+        var tipo = document.getElementById('txtusu').value;
+        var direc = document.getElementById('txtdire').value;
+        var usuar = document.getElementById('txtemai').value;
+        var contra = document.getElementById('txtcon').value;
+        usuario.push({
+                "ide":ident,
+                "nom":nomb,
+                "tel":tele,
+                "tip":tipo,
+                "dir":direc,
+                "usu":usuar,
+                "con":contra }
+            );
+            presentar();
+    }
+    function presentar(){
+        var mostrar= '';
+        for(var i=0; i<usuario.length;i++){
+            mostrar += "<tr><td class=td2>"+i+"</td>"
+            mostrar += "<td class=td2>"+usuario[i].ide+"</td>";
+            mostrar += "<td class=td2>"+usuario[i].nom+"</td>";
+            mostrar += "<td class=td2>"+usuario[i].tel+"</td>";
+            mostrar += "<td class=td2>"+usuario[i].tip+"</td>";
+            mostrar += "<td class=td2>"+usuario[i].dir+"</td>";
+            mostrar += "<td class=td2>"+usuario[i].usu+"</td>";
+            mostrar += "<td class=td2>"+usuario[i].con+"</td></tr>"
+        }
+        document.getElementById('tabla').innerHTML=mostrar;
+    }
+</script>
